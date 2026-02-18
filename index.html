@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ブループロトコル：スターレゾナンス（スタレゾ）の用語辞書をGoogle日本語入力・Gboard用にダウンロードできるツール">
+  <title>スタレゾ辞書 | ブループロトコル：スターレゾナンス IME辞書ダウンロード</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="header-left">
+        <h1 class="app-title">スタレゾ辞書</h1>
+        <p class="app-subtitle">ブループロトコル：スターレゾナンス ― Google日本語入力 &amp; Gboard 用語辞書</p>
+      </div>
+      <div class="header-right">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdnGsAKCZd4cm69lYrpuQGAvJvKKVbbyqGLiK7prGJcQE6-aw/viewform"
+          target="_blank" rel="noopener" class="header-report-link">📝 不具合・修正の報告はこちら</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-wrap">
+    <!-- Loading -->
+    <div class="loading" id="loading">
+      <div class="spinner"></div>
+      <p>辞書データを読み込み中...</p>
+    </div>
+
+    <!-- Error -->
+    <div class="error-state" id="errorState" style="display:none">
+      <div class="error-icon">⚠️</div>
+      <h2>データの読み込みに失敗しました</h2>
+      <p id="errorMessage"></p>
+    </div>
+
+    <!-- Content (hidden until loaded) -->
+    <div class="content" id="content" style="display:none">
+
+      <!-- Step 1: Category selection -->
+      <section class="step-section" id="stepCategories">
+        <div class="step-header">
+          <div class="step-header-top">
+            <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+              <span class="step-num">1</span>
+              <h2>カテゴリを選択</h2>
+              <div class="step-actions">
+                <button class="btn btn-ghost btn-sm" id="selectAllCatsBtn">全選択</button>
+                <button class="btn btn-ghost btn-sm" id="deselectAllCatsBtn">全解除</button>
+              </div>
+            </div>
+          </div>
+          <p class="step-hint">ダウンロードしたいカテゴリを選んでください（複数選択可）</p>
+        </div>
+        <div class="category-grid" id="categoryGrid">
+          <!-- rendered by JS -->
+        </div>
+      </section>
+
+      <!-- Step 2: Word review -->
+      <section class="step-section" id="stepWords" style="display:none">
+        <div class="step-header">
+          <div class="step-header-top">
+            <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+              <span class="step-num">2</span>
+              <h2>単語を確認・選択</h2>
+              <div class="step-actions">
+                <button class="btn btn-ghost btn-sm" id="selectAllWordsBtn">全選択</button>
+                <button class="btn btn-ghost btn-sm" id="deselectAllWordsBtn">全解除</button>
+              </div>
+            </div>
+          </div>
+          <p class="step-hint">不要な単語のチェックを外してください</p>
+        </div>
+
+        <!-- Category tabs -->
+        <div class="category-tabs" id="categoryTabs"></div>
+
+        <!-- Search -->
+        <div class="search-bar">
+          <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          <input type="text" id="searchInput" placeholder="単語・よみで検索..." autocomplete="off">
+          <button class="search-clear" id="searchClear" style="display:none">&times;</button>
+        </div>
+
+        <!-- Word table -->
+        <div class="word-panel">
+          <div class="word-table-wrap">
+            <table class="word-table" id="wordTable">
+              <thead>
+                <tr>
+                  <th class="col-chk"><label class="chk chk-header"><input type="checkbox" id="tabSelectAll"
+                        checked><span class="chk-mark"></span></label></th>
+                  <th class="col-word">単語</th>
+                  <th class="col-reading">よみ</th>
+                  <th class="col-class">品詞</th>
+                  <th class="col-comment">コメント</th>
+                </tr>
+              </thead>
+              <tbody id="wordBody"></tbody>
+            </table>
+          </div>
+          <div class="word-summary" id="wordSummary"></div>
+        </div>
+      </section>
+
+      <!-- Step 3: Download -->
+      <section class="step-section" id="stepDownload" style="display:none">
+        <div class="step-header">
+          <span class="step-num">3</span>
+          <h2>辞書をダウンロード</h2>
+          <p class="step-hint">フォーマットを選んでダウンロードしてください</p>
+        </div>
+        <div class="download-cards">
+          <div class="dl-card" id="dlCardPC">
+            <div class="dl-card-icon">🖥️</div>
+            <div class="dl-card-info">
+              <strong>Google日本語入力（PC）</strong>
+              <span>TSVテキストファイル (.txt)</span>
+            </div>
+            <button class="btn btn-primary" id="dlPC">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              ダウンロード
+            </button>
+          </div>
+          <div class="dl-card" id="dlCardAndroid">
+            <div class="dl-card-icon">📱</div>
+            <div class="dl-card-info">
+              <strong>Gboard（Android）</strong>
+              <span>ZIPファイル (.zip)</span>
+            </div>
+            <button class="btn btn-primary" id="dlAndroid">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              ダウンロード
+            </button>
+          </div>
+        </div>
+        <div class="dl-count" id="dlCount"></div>
+      </section>
+
+      <!-- Usage Guide -->
+      <section class="step-section guide-section" id="guideSection">
+        <div class="step-header">
+          <div class="step-header-top">
+            <div>
+              <span class="step-num">?</span>
+              <h2>使い方ガイド</h2>
+            </div>
+            <button class="btn btn-ghost btn-sm" id="guideToggle">▼ 開く</button>
+          </div>
+        </div>
+        <div class="guide-content" id="guideContent" style="display:none">
+
+          <div class="guide-block">
+            <h3>🖥️ Google日本語入力（PC）の場合</h3>
+            <ol>
+              <li>上の手順でカテゴリを選び、<strong>「Google日本語入力（PC）」</strong>からダウンロード</li>
+              <li><code>dictionary.txt</code> がダウンロードされます</li>
+              <li>タスクバーの <strong>Google日本語入力アイコン</strong>（「あ」「A」等）を右クリック</li>
+              <li><strong>「辞書ツール」</strong> を選択</li>
+              <li>メニューの <strong>「管理」→「新規辞書にインポート」</strong> をクリック</li>
+              <li>ダウンロードした <code>dictionary.txt</code> を選択</li>
+              <li>辞書名を入力（例：「スタレゾ」）して <strong>「インポート」</strong></li>
+            </ol>
+            <div class="guide-note">💡 不要になった場合は、辞書ツールから該当辞書を削除すれば元に戻せます</div>
+          </div>
+
+          <div class="guide-block">
+            <h3>📱 Gboard（Android）の場合</h3>
+            <ol>
+              <li>上の手順でカテゴリを選び、<strong>「Gboard（Android）」</strong>からダウンロード</li>
+              <li><code>gboard_dictionary.zip</code> がダウンロードされます</li>
+              <li><strong>Gboardアプリ</strong>を開く（設定 → 言語と入力 → Gboard）</li>
+              <li><strong>「単語リスト」→「日本語」</strong> を選択</li>
+              <li>右上の <strong>「⋮」メニュー → 「インポート」</strong> を選択</li>
+              <li>ダウンロードした ZIPファイル内の <code>dictionary.txt</code> を選択</li>
+            </ol>
+            <div class="guide-note">💡 端末によってメニューの表記が異なる場合があります。「辞書」「ユーザー辞書」等の項目を探してください</div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Changelog -->
+      <section class="step-section changelog-section">
+        <div class="step-header">
+          <div class="step-header-top">
+            <div>
+              <span class="step-num">📋</span>
+              <h2>更新履歴</h2>
+            </div>
+            <button class="btn btn-ghost btn-sm" id="changelogToggle">▼ 開く</button>
+          </div>
+        </div>
+        <div class="changelog-content" id="changelogContent" style="display:none">
+          <div class="changelog-entry">
+            <div class="changelog-ver">ver 1.00<span class="changelog-date">2026.02.18</span></div>
+            <ul class="changelog-list">
+              <li>S1 カナミアイベントまで対応</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+    <p>スタレゾ辞書 &copy; 2026</p>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script>
+    (() => {
+      'use strict';
+
+      // ============================================
+      // State
+      // ============================================
+      let allCategories = [];
+      let allWords = [];
+      let selectedCategoryIds = new Set();
+      let wordEnabled = {};           // wordId -> boolean
+      let activeTab = null;           // category id for word tab
+      let searchQuery = '';           // search filter
+      const STORAGE_KEY = 'stareso-dict-state';
+
+      const $ = s => document.querySelector(s);
+      const $$ = s => document.querySelectorAll(s);
+
+      // ============================================
+      // LocalStorage persistence
+      // ============================================
+      function saveState() {
+        try {
+          const state = {
+            cats: [...selectedCategoryIds],
+            disabled: Object.entries(wordEnabled).filter(([, v]) => v === false).map(([k]) => k)
+          };
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+        } catch (e) { /* quota exceeded etc */ }
+      }
+
+      function loadState() {
+        try {
+          const raw = localStorage.getItem(STORAGE_KEY);
+          if (!raw) return;
+          const state = JSON.parse(raw);
+          if (state.cats && state.cats.length) {
+            state.cats.forEach(id => {
+              if (allCategories.some(c => c.id === id)) selectedCategoryIds.add(id);
+            });
+          }
+          if (state.disabled) {
+            state.disabled.forEach(id => { wordEnabled[id] = false; });
+          }
+        } catch (e) { /* corrupt data */ }
+      }
+
+      // ============================================
+      // Load data.json
+      // ============================================
+      async function init() {
+        try {
+          const res = await fetch('data.json?t=' + Date.now());
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          const data = await res.json();
+          allCategories = (data.categories || []).sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
+          allWords = data.words || [];
+          // default all enabled
+          allWords.forEach(w => { wordEnabled[w.id] = true; });
+          // restore saved state
+          loadState();
+          $('#loading').style.display = 'none';
+          $('#content').style.display = '';
+          renderCategories();
+          if (selectedCategoryIds.size > 0) onCategoryChange();
+        } catch (e) {
+          $('#loading').style.display = 'none';
+          $('#errorState').style.display = '';
+          $('#errorMessage').textContent = e.message;
+        }
+      }
+
+      // ============================================
+      // Category Cards
+      // ============================================
+      function renderCategories() {
+        const grid = $('#categoryGrid');
+        grid.innerHTML = '';
+        allCategories.forEach(cat => {
+          const count = allWords.filter(w => w.categoryId === cat.id).length;
+          const card = document.createElement('label');
+          card.className = 'cat-card' + (selectedCategoryIds.has(cat.id) ? ' selected' : '');
+          card.innerHTML = `
+          <input type="checkbox" ${selectedCategoryIds.has(cat.id) ? 'checked' : ''}>
+          <span class="cat-color" style="background:${cat.color}"></span>
+          <span class="cat-name">${esc(cat.name)}</span>
+          <span class="cat-count">${count} 語</span>
+          <span class="cat-check-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+        `;
+          card.querySelector('input').addEventListener('change', e => {
+            if (e.target.checked) selectedCategoryIds.add(cat.id);
+            else selectedCategoryIds.delete(cat.id);
+            card.classList.toggle('selected', e.target.checked);
+            onCategoryChange();
+            saveState();
+          });
+          grid.appendChild(card);
+        });
+      }
+
+      // Select/Deselect all categories
+      $('#selectAllCatsBtn').addEventListener('click', () => {
+        allCategories.forEach(c => selectedCategoryIds.add(c.id));
+        renderCategories();
+        onCategoryChange();
+        saveState();
+      });
+      $('#deselectAllCatsBtn').addEventListener('click', () => {
+        selectedCategoryIds.clear();
+        renderCategories();
+        onCategoryChange();
+        saveState();
+      });
+
+      function onCategoryChange() {
+        const hasSelection = selectedCategoryIds.size > 0;
+        $('#stepWords').style.display = hasSelection ? '' : 'none';
+        $('#stepDownload').style.display = hasSelection ? '' : 'none';
+        if (hasSelection) {
+          allWords.forEach(w => {
+            if (selectedCategoryIds.has(w.categoryId)) {
+              if (wordEnabled[w.id] === undefined) wordEnabled[w.id] = true;
+            }
+          });
+          const selectedArr = allCategories.filter(c => selectedCategoryIds.has(c.id));
+          if (!activeTab || !selectedCategoryIds.has(activeTab)) {
+            activeTab = selectedArr[0]?.id || null;
+          }
+          renderCategoryTabs();
+          renderWordTable();
+          updateDlCount();
+        }
+      }
+
+      // ============================================
+      // Category Tabs (for word view)
+      // ============================================
+      function renderCategoryTabs() {
+        const tabs = $('#categoryTabs');
+        tabs.innerHTML = '';
+        allCategories.filter(c => selectedCategoryIds.has(c.id)).forEach(cat => {
+          const btn = document.createElement('button');
+          btn.className = 'tab-btn' + (cat.id === activeTab ? ' active' : '');
+          btn.innerHTML = `<span class="tab-dot" style="background:${cat.color}"></span>${esc(cat.name)}`;
+          btn.addEventListener('click', () => {
+            activeTab = cat.id;
+            renderCategoryTabs();
+            renderWordTable();
+          });
+          tabs.appendChild(btn);
+        });
+      }
+
+      // ============================================
+      // Search
+      // ============================================
+      const searchInput = $('#searchInput');
+      const searchClear = $('#searchClear');
+
+      searchInput.addEventListener('input', () => {
+        searchQuery = searchInput.value.trim().toLowerCase();
+        searchClear.style.display = searchQuery ? '' : 'none';
+        // Show step 2/3 while searching even without category selection
+        if (searchQuery) {
+          $('#stepWords').style.display = '';
+          $('#stepDownload').style.display = '';
+        } else {
+          const hasSelection = selectedCategoryIds.size > 0;
+          $('#stepWords').style.display = hasSelection ? '' : 'none';
+          $('#stepDownload').style.display = hasSelection ? '' : 'none';
+        }
+        renderWordTable();
+        updateDlCount();
+      });
+
+      searchClear.addEventListener('click', () => {
+        searchInput.value = '';
+        searchQuery = '';
+        searchClear.style.display = 'none';
+        renderWordTable();
+      });
+
+      // ============================================
+      // Word Table
+      // ============================================
+      function renderWordTable() {
+        const tbody = $('#wordBody');
+        tbody.innerHTML = '';
+
+        let words;
+        const isSearching = searchQuery.length > 0;
+
+        if (isSearching) {
+          // Search across ALL categories (not just selected)
+          words = allWords.filter(w =>
+          (w.word.toLowerCase().includes(searchQuery) ||
+            w.reading.toLowerCase().includes(searchQuery) ||
+            (w.comment || '').toLowerCase().includes(searchQuery))
+          );
+        } else {
+          words = allWords.filter(w => w.categoryId === activeTab);
+        }
+
+        // Hide/show tabs when searching
+        $('#categoryTabs').style.display = isSearching ? 'none' : '';
+
+        if (words.length === 0 && isSearching) {
+          const tr = document.createElement('tr');
+          tr.innerHTML = `<td colspan="5" style="text-align:center;color:var(--text-muted);padding:24px">「${esc(searchQuery)}」に一致する単語はありません</td>`;
+          tbody.appendChild(tr);
+          updateWordSummary();
+          return;
+        }
+
+        let lastCatId = null;
+        words.forEach(w => {
+          // Show category header when searching across categories
+          if (isSearching && w.categoryId !== lastCatId) {
+            lastCatId = w.categoryId;
+            const cat = allCategories.find(c => c.id === w.categoryId);
+            if (cat) {
+              const headerTr = document.createElement('tr');
+              headerTr.className = 'cat-header-row';
+              headerTr.innerHTML = `<td colspan="5"><span class="cat-header-dot" style="background:${cat.color}"></span>${esc(cat.name)}</td>`;
+              tbody.appendChild(headerTr);
+            }
+          }
+
+          // In search: words from unselected categories show unchecked
+          const catSelected = selectedCategoryIds.has(w.categoryId);
+          const en = catSelected ? (wordEnabled[w.id] !== false) : (wordEnabled[w.id] === true && catSelected);
+          const tr = document.createElement('tr');
+          tr.className = en ? '' : 'disabled-row';
+          tr.innerHTML = `
+          <td class="col-chk">
+            <label class="chk"><input type="checkbox" ${en ? 'checked' : ''} data-wid="${w.id}"><span class="chk-mark"></span></label>
+          </td>
+          <td class="col-word">${esc(w.word)}</td>
+          <td class="col-reading">${esc(w.reading)}</td>
+          <td class="col-class">${esc(w.wordClass)}</td>
+          <td class="col-comment">${esc(w.comment || '')}</td>
+        `;
+          tr.querySelector('input').addEventListener('change', e => {
+            wordEnabled[w.id] = e.target.checked;
+            tr.classList.toggle('disabled-row', !e.target.checked);
+
+            // Auto-select category when checking a word from unselected category
+            if (e.target.checked && !selectedCategoryIds.has(w.categoryId)) {
+              selectedCategoryIds.add(w.categoryId);
+              // Disable all other words in this newly added category
+              allWords.filter(x => x.categoryId === w.categoryId && x.id !== w.id).forEach(x => {
+                wordEnabled[x.id] = false;
+              });
+              renderCategories();
+            }
+
+            updateDlCount();
+            saveState();
+          });
+          tbody.appendChild(tr);
+        });
+        updateWordSummary();
+        updateTabSelectAll();
+      }
+
+      function updateWordSummary() {
+        const words = allWords.filter(w => w.categoryId === activeTab);
+        const enabled = words.filter(w => wordEnabled[w.id] !== false).length;
+        $('#wordSummary').textContent = `${enabled} / ${words.length} 語が選択中`;
+      }
+
+      // Select/Deselect all words (ALL selected categories)
+      $('#selectAllWordsBtn').addEventListener('click', () => {
+        allWords.filter(w => selectedCategoryIds.has(w.categoryId)).forEach(w => { wordEnabled[w.id] = true; });
+        renderWordTable();
+        updateDlCount();
+        saveState();
+      });
+      $('#deselectAllWordsBtn').addEventListener('click', () => {
+        allWords.filter(w => selectedCategoryIds.has(w.categoryId)).forEach(w => { wordEnabled[w.id] = false; });
+        renderWordTable();
+        updateDlCount();
+        saveState();
+      });
+
+      // Header checkbox: toggle current tab/category
+      $('#tabSelectAll').addEventListener('change', e => {
+        const checked = e.target.checked;
+        const targetWords = searchQuery.length > 0
+          ? allWords.filter(w => (w.word.toLowerCase().includes(searchQuery) || w.reading.toLowerCase().includes(searchQuery) || (w.comment || '').toLowerCase().includes(searchQuery)))
+          : allWords.filter(w => w.categoryId === activeTab);
+        targetWords.forEach(w => { wordEnabled[w.id] = checked; });
+        renderWordTable();
+        updateDlCount();
+        saveState();
+      });
+
+      function updateTabSelectAll() {
+        const isSearching = searchQuery.length > 0;
+        const words = isSearching
+          ? allWords.filter(w => (w.word.toLowerCase().includes(searchQuery) || w.reading.toLowerCase().includes(searchQuery) || (w.comment || '').toLowerCase().includes(searchQuery)))
+          : allWords.filter(w => w.categoryId === activeTab);
+        const allChecked = words.length > 0 && words.every(w => wordEnabled[w.id] !== false);
+        const noneChecked = words.every(w => wordEnabled[w.id] === false);
+        const cb = $('#tabSelectAll');
+        cb.checked = allChecked;
+        cb.indeterminate = !allChecked && !noneChecked;
+      }
+
+      // ============================================
+      // Download Count
+      // ============================================
+      function updateDlCount() {
+        const count = getExportWords().length;
+        $('#dlCount').textContent = `選択中の単語: ${count} 語`;
+        updateWordSummary();
+      }
+
+      function getExportWords() {
+        return allWords.filter(w =>
+          selectedCategoryIds.has(w.categoryId) && wordEnabled[w.id] !== false
+        );
+      }
+
+      // ============================================
+      // Download - Google IME (PC)
+      // ============================================
+      $('#dlPC').addEventListener('click', () => {
+        const words = getExportWords();
+        if (words.length === 0) { toast('ダウンロードする単語がありません', 'error'); return; }
+        const lines = words.map(w => `${w.reading}\t${w.word}\t${w.wordClass}\t${w.comment || ''}`);
+        const BOM = '\uFEFF';
+        download('dictionary.txt', BOM + lines.join('\n'), 'text/plain;charset=utf-8');
+        toast(`${words.length} 件の単語をダウンロードしました`, 'success');
+      });
+
+      // ============================================
+      // Download - Gboard (Android)
+      // ============================================
+      $('#dlAndroid').addEventListener('click', async () => {
+        const words = getExportWords();
+        if (words.length === 0) { toast('ダウンロードする単語がありません', 'error'); return; }
+        const lines = ['# Gboard Dictionary version:1'];
+        words.forEach(w => lines.push(`${w.reading}\t${w.word}\tja-JP`));
+        const content = lines.join('\n');
+        if (typeof JSZip === 'undefined') { toast('ZIPライブラリが読み込めません', 'error'); return; }
+        const zip = new JSZip();
+        zip.file('dictionary.txt', content);
+        const blob = await zip.generateAsync({ type: 'blob' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url; a.download = 'gboard_dictionary.zip'; a.click();
+        URL.revokeObjectURL(url);
+        toast(`${words.length} 件の単語をダウンロードしました`, 'success');
+      });
+
+      // ============================================
+      // Usage Guide toggle
+      // ============================================
+      const guideToggle = $('#guideToggle');
+      const guideContent = $('#guideContent');
+      let guideOpen = false;
+
+      guideToggle.addEventListener('click', () => {
+        guideOpen = !guideOpen;
+        guideContent.style.display = guideOpen ? '' : 'none';
+        guideToggle.textContent = guideOpen ? '▲ 閉じる' : '▼ 開く';
+      });
+
+      // ============================================
+      // Changelog toggle
+      // ============================================
+      const clToggle = $('#changelogToggle');
+      const clContent = $('#changelogContent');
+      let clOpen = false;
+
+      clToggle.addEventListener('click', () => {
+        clOpen = !clOpen;
+        clContent.style.display = clOpen ? '' : 'none';
+        clToggle.textContent = clOpen ? '▲ 閉じる' : '▼ 開く';
+      });
+
+      // ============================================
+      // Helpers
+      // ============================================
+      function download(name, content, mime) {
+        const blob = new Blob([content], { type: mime });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = name; a.click();
+        URL.revokeObjectURL(a.href);
+      }
+
+      function esc(s) {
+        const d = document.createElement('div'); d.textContent = s; return d.innerHTML;
+      }
+
+      function toast(msg, type = 'info') {
+        const icons = { success: '✅', error: '❌', info: 'ℹ️' };
+        const t = document.createElement('div');
+        t.className = `toast ${type}`;
+        t.innerHTML = `<span class="toast-icon">${icons[type]}</span><span>${msg}</span>`;
+        $('#toastContainer').appendChild(t);
+        setTimeout(() => { t.style.opacity = '0'; t.style.transform = 'translateX(100%)'; t.style.transition = 'all .3s'; setTimeout(() => t.remove(), 300); }, 3000);
+      }
+
+      // Boot
+      init();
+    })();
+  </script>
+</body>
+
+</html>

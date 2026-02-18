@@ -1,0 +1,1952 @@
+{
+  "categories": [
+    {
+      "id": "cat1",
+      "name": "クラス",
+      "color": "#5B4CC4",
+      "order": 0
+    },
+    {
+      "id": "cat2",
+      "name": "マップ",
+      "color": "#3498DB",
+      "order": 1
+    },
+    {
+      "id": "cat3",
+      "name": "通常モンスター",
+      "color": "#27AE60",
+      "order": 2
+    },
+    {
+      "id": "cat4",
+      "name": "精鋭モンスター",
+      "color": "#E67E22",
+      "order": 3
+    },
+    {
+      "id": "cat5",
+      "name": "ボスモンスター",
+      "color": "#E74C3C",
+      "order": 4
+    },
+    {
+      "id": "cat6",
+      "name": "アイテム",
+      "color": "#F39C12",
+      "order": 5
+    },
+    {
+      "id": "cat7",
+      "name": "ショップ",
+      "color": "#1ABC9C",
+      "order": 6
+    },
+    {
+      "id": "cat8",
+      "name": "人物",
+      "color": "#E84393",
+      "order": 7
+    },
+    {
+      "id": "b2a2f8d4",
+      "name": "イベント",
+      "color": "#E17055",
+      "order": 8
+    },
+    {
+      "id": "cat9",
+      "name": "用語",
+      "color": "#636E72",
+      "order": 9
+    },
+    {
+      "id": "45b28fa6",
+      "name": "略語",
+      "color": "#636E72",
+      "order": 10
+    }
+  ],
+  "words": [
+    {
+      "id": "w1",
+      "categoryId": "cat1",
+      "reading": "へゔぃがーでぃあん",
+      "word": "ヘヴィガーディアン",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w2",
+      "categoryId": "cat1",
+      "reading": "しーるどふぁいたー",
+      "word": "シールドファイター",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w3",
+      "categoryId": "cat1",
+      "reading": "げいるらんさー",
+      "word": "ゲイルランサー",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w4",
+      "categoryId": "cat1",
+      "reading": "すとーむぶれいど",
+      "word": "ストームブレイド",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w5",
+      "categoryId": "cat1",
+      "reading": "でぃばいんあーちゃー",
+      "word": "ディバインアーチャー",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w6",
+      "categoryId": "cat1",
+      "reading": "ふろすとめいじ",
+      "word": "フロストメイジ",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w7",
+      "categoryId": "cat1",
+      "reading": "ゔぁーだんとおらくる",
+      "word": "ヴァーダントオラクル",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w8",
+      "categoryId": "cat1",
+      "reading": "びーとぱふぉーまー",
+      "word": "ビートパフォーマー",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w9",
+      "categoryId": "cat1",
+      "reading": "ごうしんがた",
+      "word": "剛身型",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w10",
+      "categoryId": "cat1",
+      "reading": "ごうしゅがた",
+      "word": "剛守型",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w11",
+      "categoryId": "cat1",
+      "reading": "こうさいがた",
+      "word": "光砕型",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w12",
+      "categoryId": "cat1",
+      "reading": "こうじゅんがた",
+      "word": "光盾型",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w13",
+      "categoryId": "cat1",
+      "reading": "れっぷうがた",
+      "word": "烈風型",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w14",
+      "categoryId": "cat1",
+      "reading": "らんぷうがた",
+      "word": "乱風型",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w15",
+      "categoryId": "cat1",
+      "reading": "らいじんがた",
+      "word": "雷刃型",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w16",
+      "categoryId": "cat1",
+      "reading": "げつえいがた",
+      "word": "月影型",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w17",
+      "categoryId": "cat1",
+      "reading": "ろうきゅうがた",
+      "word": "狼弓型",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w18",
+      "categoryId": "cat1",
+      "reading": "ようきゅうがた",
+      "word": "鷹弓型",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w19",
+      "categoryId": "cat1",
+      "reading": "ひょうががた",
+      "word": "氷牙型",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w20",
+      "categoryId": "cat1",
+      "reading": "そうてんがた",
+      "word": "霜天型",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w21",
+      "categoryId": "cat1",
+      "reading": "いさきがた",
+      "word": "威咲型",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w22",
+      "categoryId": "cat1",
+      "reading": "しんゆがた",
+      "word": "森癒型",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w23",
+      "categoryId": "cat1",
+      "reading": "きょうおんがた",
+      "word": "狂音型",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w24",
+      "categoryId": "cat1",
+      "reading": "きょうそうがた",
+      "word": "響奏型",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w25",
+      "categoryId": "cat1",
+      "reading": "しょくせいがく",
+      "word": "植生学",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w26",
+      "categoryId": "cat1",
+      "reading": "こうぶつがく",
+      "word": "鉱物学",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w27",
+      "categoryId": "cat1",
+      "reading": "けっしょうがく",
+      "word": "結晶学",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w28",
+      "categoryId": "cat1",
+      "reading": "ごうしん",
+      "word": "剛身",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w29",
+      "categoryId": "cat1",
+      "reading": "ごうしゅ",
+      "word": "剛守",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w30",
+      "categoryId": "cat1",
+      "reading": "こうさい",
+      "word": "光砕",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w31",
+      "categoryId": "cat1",
+      "reading": "こうじゅん",
+      "word": "光盾",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w32",
+      "categoryId": "cat1",
+      "reading": "れっぷう",
+      "word": "烈風",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w33",
+      "categoryId": "cat1",
+      "reading": "らんぷう",
+      "word": "乱風",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w34",
+      "categoryId": "cat1",
+      "reading": "らいじん",
+      "word": "雷刃",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w35",
+      "categoryId": "cat1",
+      "reading": "げつえい",
+      "word": "月影",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w36",
+      "categoryId": "cat1",
+      "reading": "ろうきゅう",
+      "word": "狼弓",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w37",
+      "categoryId": "cat1",
+      "reading": "ようきゅう",
+      "word": "鷹弓",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w38",
+      "categoryId": "cat1",
+      "reading": "ひょうが",
+      "word": "氷牙",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w39",
+      "categoryId": "cat1",
+      "reading": "そうてん",
+      "word": "霜天",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w40",
+      "categoryId": "cat1",
+      "reading": "いさき",
+      "word": "威咲",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w41",
+      "categoryId": "cat1",
+      "reading": "しんゆ",
+      "word": "森癒",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w42",
+      "categoryId": "cat1",
+      "reading": "きょうおん",
+      "word": "狂音",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w43",
+      "categoryId": "cat1",
+      "reading": "きょうそう",
+      "word": "響奏",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w44",
+      "categoryId": "cat1",
+      "reading": "しょくせい",
+      "word": "植生",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w45",
+      "categoryId": "cat1",
+      "reading": "こうぶつ",
+      "word": "鉱物",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w46",
+      "categoryId": "cat1",
+      "reading": "けっしょう",
+      "word": "結晶",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w47",
+      "categoryId": "cat1",
+      "reading": "たんぞう",
+      "word": "鍛造",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w48",
+      "categoryId": "cat1",
+      "reading": "こうげい",
+      "word": "工芸",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w49",
+      "categoryId": "cat1",
+      "reading": "もっこう",
+      "word": "木工",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w50",
+      "categoryId": "cat1",
+      "reading": "おりもの",
+      "word": "織物",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w51",
+      "categoryId": "cat1",
+      "reading": "りょうり",
+      "word": "料理",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w52",
+      "categoryId": "cat1",
+      "reading": "れんきん",
+      "word": "錬金",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w53",
+      "categoryId": "cat2",
+      "reading": "ごぶりんのそうくつ",
+      "word": "ゴブリンの巣窟",
+      "wordClass": "名詞",
+      "comment": "S1ダンジョン"
+    },
+    {
+      "id": "w54",
+      "categoryId": "cat2",
+      "reading": "てぃなせいしんりょういき",
+      "word": "ティナ・精神領域",
+      "wordClass": "名詞",
+      "comment": "S1ダンジョン"
+    },
+    {
+      "id": "w55",
+      "categoryId": "cat2",
+      "reading": "きょとうのいせき",
+      "word": "巨塔の遺跡",
+      "wordClass": "名詞",
+      "comment": "S1ダンジョン"
+    },
+    {
+      "id": "w56",
+      "categoryId": "cat2",
+      "reading": "かなみあのしれん",
+      "word": "カナミアの試練",
+      "wordClass": "名詞",
+      "comment": "S1ダンジョン"
+    },
+    {
+      "id": "w57",
+      "categoryId": "cat2",
+      "reading": "きょりゅうのつめあと",
+      "word": "巨竜の爪痕",
+      "wordClass": "名詞",
+      "comment": "S1ダンジョン"
+    },
+    {
+      "id": "w58",
+      "categoryId": "cat2",
+      "reading": "あんむようさい",
+      "word": "暗霧要塞",
+      "wordClass": "名詞",
+      "comment": "S1ダンジョン"
+    },
+    {
+      "id": "w59",
+      "categoryId": "cat2",
+      "reading": "ふあんていなくうかん",
+      "word": "不安定な空間",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w60",
+      "categoryId": "cat2",
+      "reading": "きょくげんくうかん",
+      "word": "極限空間",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w61",
+      "categoryId": "cat2",
+      "reading": "れぐでぃにすいせき",
+      "word": "レグディニス遺跡",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w62",
+      "categoryId": "cat2",
+      "reading": "こくうのうきしま",
+      "word": "虚空の浮島",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w63",
+      "categoryId": "cat2",
+      "reading": "こくうのうきしましんりゅうのかせ",
+      "word": "虚空の浮島・神竜の枷",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "71e18aac",
+      "categoryId": "45b28fa6",
+      "reading": "うきしま",
+      "word": "虚空の浮島",
+      "wordClass": "名詞",
+      "comment": "略称"
+    },
+    {
+      "id": "99f4888e",
+      "categoryId": "45b28fa6",
+      "reading": "うきしま",
+      "word": "虚空の浮島・神竜の枷",
+      "wordClass": "名詞",
+      "comment": "略称"
+    },
+    {
+      "id": "w64",
+      "categoryId": "cat2",
+      "reading": "あすてるりーず",
+      "word": "アステルリーズ",
+      "wordClass": "名詞",
+      "comment": "街・フィールド"
+    },
+    {
+      "id": "w65",
+      "categoryId": "cat2",
+      "reading": "あすてりあへいげん",
+      "word": "アステリア平原",
+      "wordClass": "名詞",
+      "comment": "街・フィールド"
+    },
+    {
+      "id": "w66",
+      "categoryId": "cat2",
+      "reading": "ちかがい",
+      "word": "地下街",
+      "wordClass": "名詞",
+      "comment": "街・フィールド"
+    },
+    {
+      "id": "w67",
+      "categoryId": "cat2",
+      "reading": "かぜなりのきょうこく",
+      "word": "風鳴りの峡谷",
+      "wordClass": "名詞",
+      "comment": "街・フィールド"
+    },
+    {
+      "id": "w68",
+      "categoryId": "cat2",
+      "reading": "こくらんのしんくつ",
+      "word": "黒藍の深窟",
+      "wordClass": "名詞",
+      "comment": "街・フィールド"
+    },
+    {
+      "id": "w69",
+      "categoryId": "cat2",
+      "reading": "はなあかりのもり",
+      "word": "花明かりの森",
+      "wordClass": "名詞",
+      "comment": "街・フィールド"
+    },
+    {
+      "id": "w70",
+      "categoryId": "cat2",
+      "reading": "あめやまぬもり",
+      "word": "雨止まぬ森",
+      "wordClass": "名詞",
+      "comment": "街・フィールド"
+    },
+    {
+      "id": "w71",
+      "categoryId": "cat2",
+      "reading": "かいたくきょく",
+      "word": "開拓局",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w72",
+      "categoryId": "cat3",
+      "reading": "うりぼ",
+      "word": "ウリボ",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w73",
+      "categoryId": "cat3",
+      "reading": "ほーんごーと",
+      "word": "ホーンゴート",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w74",
+      "categoryId": "cat3",
+      "reading": "らんぶるぼあ",
+      "word": "ランブルボア",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w75",
+      "categoryId": "cat3",
+      "reading": "ないふごぶりん",
+      "word": "ナイフゴブリン",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w76",
+      "categoryId": "cat3",
+      "reading": "ごぶりんぐろう",
+      "word": "ゴブリングロウ",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w77",
+      "categoryId": "cat3",
+      "reading": "ごぶりんないと",
+      "word": "ゴブリンナイト",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w78",
+      "categoryId": "cat3",
+      "reading": "ぼうがんごぶりん",
+      "word": "ボウガンゴブリン",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w79",
+      "categoryId": "cat3",
+      "reading": "ふれいむごぶりんぐろう",
+      "word": "フレイムゴブリングロウ",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w80",
+      "categoryId": "cat3",
+      "reading": "たんけんふれいむごぶりん",
+      "word": "短剣フレイムゴブリン",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w81",
+      "categoryId": "cat3",
+      "reading": "ふれいむごぶりんめいじ",
+      "word": "フレイムゴブリンメイジ",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w82",
+      "categoryId": "cat3",
+      "reading": "ひーとふぁっとまん",
+      "word": "ヒートファットマン",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w83",
+      "categoryId": "cat3",
+      "reading": "ひめかにくも",
+      "word": "ヒメカニクモ",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w84",
+      "categoryId": "cat3",
+      "reading": "かにくも",
+      "word": "カニクモ",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w85",
+      "categoryId": "cat3",
+      "reading": "さんぞくのおのつかい",
+      "word": "山賊の斧使い",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w86",
+      "categoryId": "cat3",
+      "reading": "さんぞくのせっこう",
+      "word": "山賊の斥候",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w87",
+      "categoryId": "cat3",
+      "reading": "さんぞくのゆみつかい",
+      "word": "山賊の弓使い",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w88",
+      "categoryId": "cat3",
+      "reading": "さんぞくのせんとういん",
+      "word": "山賊の戦闘員",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w89",
+      "categoryId": "cat3",
+      "reading": "ふぇいたるみーん",
+      "word": "フェイタルミーン",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w90",
+      "categoryId": "cat3",
+      "reading": "ぶらすとみーん",
+      "word": "ブラストミーン",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w91",
+      "categoryId": "cat3",
+      "reading": "むーく",
+      "word": "ムーク",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w92",
+      "categoryId": "cat3",
+      "reading": "むーくはんまー",
+      "word": "ムークハンマー",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w93",
+      "categoryId": "cat3",
+      "reading": "むーくですとろい",
+      "word": "ムークデストロイ",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w94",
+      "categoryId": "cat3",
+      "reading": "むーくあっくす",
+      "word": "ムークアックス",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w95",
+      "categoryId": "cat3",
+      "reading": "たいらんとぼあ",
+      "word": "タイラントボア",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w96",
+      "categoryId": "cat3",
+      "reading": "げいるぼあ",
+      "word": "ゲイルボア",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w97",
+      "categoryId": "cat3",
+      "reading": "あらしのたんけんごぶりん",
+      "word": "嵐の短剣ゴブリン",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w98",
+      "categoryId": "cat3",
+      "reading": "あらしのごぶりんめいじ",
+      "word": "嵐のゴブリンメイジ",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w99",
+      "categoryId": "cat3",
+      "reading": "たかぶるあんむせっこう",
+      "word": "昂る暗霧斥候",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w100",
+      "categoryId": "cat3",
+      "reading": "たかぶるあんむじゅうし",
+      "word": "昂る暗霧銃士",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w101",
+      "categoryId": "cat3",
+      "reading": "たかぶるあんむえいへい",
+      "word": "昂る暗霧衛兵",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w102",
+      "categoryId": "cat3",
+      "reading": "たかぶるあんむけんし",
+      "word": "昂る暗霧剣士",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w103",
+      "categoryId": "cat3",
+      "reading": "すかいふぃっしゅ",
+      "word": "スカイフィッシュ",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w104",
+      "categoryId": "cat3",
+      "reading": "じゃすぱーすかいふぃっしゅ",
+      "word": "ジャスパースカイフィッシュ",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w105",
+      "categoryId": "cat3",
+      "reading": "ぎるみーうぉーりあー",
+      "word": "ギルミーウォーリアー",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w106",
+      "categoryId": "cat3",
+      "reading": "ぎるみーしゃーまん",
+      "word": "ギルミーシャーマン",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w107",
+      "categoryId": "cat3",
+      "reading": "こんじきのしぶき",
+      "word": "金色の飛沫",
+      "wordClass": "名詞",
+      "comment": "ひまつ？"
+    },
+    {
+      "id": "w108",
+      "categoryId": "cat3",
+      "reading": "あかいしぶき",
+      "word": "赤い飛沫",
+      "wordClass": "名詞",
+      "comment": "ひまつ？"
+    },
+    {
+      "id": "w109",
+      "categoryId": "cat3",
+      "reading": "きょうきのむーくきゅうへい",
+      "word": "狂気のムーク弓兵",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w110",
+      "categoryId": "cat3",
+      "reading": "まっどついんむーく",
+      "word": "マッドツインムーク",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w111",
+      "categoryId": "cat4",
+      "reading": "まいてぃぼあ",
+      "word": "マイティボア",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w112",
+      "categoryId": "cat4",
+      "reading": "ごぶりんえいし",
+      "word": "ゴブリン衛士",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w113",
+      "categoryId": "cat4",
+      "reading": "ごぶりんきゅうへい",
+      "word": "ゴブリン弓兵",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w114",
+      "categoryId": "cat4",
+      "reading": "ほのおのえるだーごぶりん",
+      "word": "炎のエルダーゴブリン",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w115",
+      "categoryId": "cat4",
+      "reading": "とろーる",
+      "word": "トロール",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w116",
+      "categoryId": "cat4",
+      "reading": "おせんかにくも",
+      "word": "オセンカニクモ",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w117",
+      "categoryId": "cat4",
+      "reading": "さんぞくのせっこうたいちょう",
+      "word": "山賊の斥候隊長",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w118",
+      "categoryId": "cat4",
+      "reading": "さんぞくのごえいたいちょう",
+      "word": "山賊の護衛隊長",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w119",
+      "categoryId": "cat4",
+      "reading": "へんいみーん",
+      "word": "変異ミーン",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w120",
+      "categoryId": "cat4",
+      "reading": "むーくうぉーりあー",
+      "word": "ムークウォーリアー",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w121",
+      "categoryId": "cat4",
+      "reading": "むーくすまっしゃー",
+      "word": "ムークスマッシャー",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w122",
+      "categoryId": "cat4",
+      "reading": "ぐれーとふぁんぐ",
+      "word": "グレートファング",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w123",
+      "categoryId": "cat4",
+      "reading": "あらしのごぶりんうぉーりあー",
+      "word": "嵐のゴブリンウォーリアー",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w124",
+      "categoryId": "cat4",
+      "reading": "あんむじゅうしのたいちょう",
+      "word": "暗霧銃士の隊長",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w125",
+      "categoryId": "cat4",
+      "reading": "あんむけんしのたいちょう",
+      "word": "暗霧剣士の隊長",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w126",
+      "categoryId": "cat4",
+      "reading": "ぎるみーはんたー",
+      "word": "ギルミーハンター",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w127",
+      "categoryId": "cat4",
+      "reading": "ぎるみーめいじ",
+      "word": "ギルミーメイジ",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w128",
+      "categoryId": "cat4",
+      "reading": "もりのごぶりんうぉーりあー",
+      "word": "森のゴブリンウォーリアー",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w129",
+      "categoryId": "cat4",
+      "reading": "むーくすかうと",
+      "word": "ムークスカウト",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w130",
+      "categoryId": "cat5",
+      "reading": "たけるこんじき",
+      "word": "猛る金色",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w131",
+      "categoryId": "cat5",
+      "reading": "ふろすとおーが",
+      "word": "フロストオーガ",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w132",
+      "categoryId": "cat5",
+      "reading": "ふれいむおーが",
+      "word": "フレイムオーガ",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w133",
+      "categoryId": "cat5",
+      "reading": "ごーすとかにくも",
+      "word": "ゴーストカニクモ",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w134",
+      "categoryId": "cat5",
+      "reading": "いこくのさんぞくちょうひぐま",
+      "word": "異国の山賊長ヒグマ",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w135",
+      "categoryId": "cat5",
+      "reading": "ゔぇのみーんのす",
+      "word": "ヴェノミーンの巣",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w136",
+      "categoryId": "cat5",
+      "reading": "むーくぼす",
+      "word": "ムークボス",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w137",
+      "categoryId": "cat5",
+      "reading": "てつが",
+      "word": "鉄牙",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w138",
+      "categoryId": "cat5",
+      "reading": "あらしのきんぐごぶりん",
+      "word": "嵐のキングゴブリン",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w139",
+      "categoryId": "cat5",
+      "reading": "さんだーおーが",
+      "word": "サンダーオーガ",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w140",
+      "categoryId": "cat5",
+      "reading": "へゔんすかい",
+      "word": "ヘヴンスカイ",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w141",
+      "categoryId": "cat5",
+      "reading": "きんぐぎるみー",
+      "word": "キングギルミー",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w142",
+      "categoryId": "cat5",
+      "reading": "きんぐごぶりん",
+      "word": "キングゴブリン",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w143",
+      "categoryId": "cat5",
+      "reading": "きんぐむーく",
+      "word": "キングムーク",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w144",
+      "categoryId": "cat5",
+      "reading": "うりぼらぶ",
+      "word": "ウリボ・ラブ",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w145",
+      "categoryId": "cat5",
+      "reading": "うりぼうぃんど",
+      "word": "ウリボ・ウィンド",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w146",
+      "categoryId": "cat5",
+      "reading": "うりぼごーるど",
+      "word": "ウリボ・ゴールド",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w147",
+      "categoryId": "cat5",
+      "reading": "きんなっぽ",
+      "word": "金ナッポ",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w148",
+      "categoryId": "cat5",
+      "reading": "ぎんなっぽ",
+      "word": "銀ナッポ",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w149",
+      "categoryId": "cat5",
+      "reading": "いつらこりうき",
+      "word": "凛・イツラコリウキ",
+      "wordClass": "名詞",
+      "comment": "氷竜"
+    },
+    {
+      "id": "w150",
+      "categoryId": "cat5",
+      "reading": "いつらこりうき",
+      "word": "イツラコリウキ",
+      "wordClass": "名詞",
+      "comment": "氷竜"
+    },
+    {
+      "id": "w151",
+      "categoryId": "cat5",
+      "reading": "しょろとる",
+      "word": "骸・ショロトル",
+      "wordClass": "名詞",
+      "comment": "闇竜"
+    },
+    {
+      "id": "w152",
+      "categoryId": "cat5",
+      "reading": "しょろとる",
+      "word": "ショロトル",
+      "wordClass": "名詞",
+      "comment": "闇竜"
+    },
+    {
+      "id": "w153",
+      "categoryId": "cat5",
+      "reading": "となてぃう",
+      "word": "光・トナティウ",
+      "wordClass": "名詞",
+      "comment": "光竜"
+    },
+    {
+      "id": "w154",
+      "categoryId": "cat5",
+      "reading": "となてぃう",
+      "word": "トナティウ",
+      "wordClass": "名詞",
+      "comment": "光竜"
+    },
+    {
+      "id": "w155",
+      "categoryId": "cat6",
+      "reading": "せいれんけっしょう",
+      "word": "星錬結晶",
+      "wordClass": "名詞",
+      "comment": "精錬素材"
+    },
+    {
+      "id": "w156",
+      "categoryId": "cat6",
+      "reading": "なぞのきんぞく",
+      "word": "謎の金属",
+      "wordClass": "名詞",
+      "comment": "精錬素材"
+    },
+    {
+      "id": "w157",
+      "categoryId": "cat6",
+      "reading": "きこうせき",
+      "word": "輝光石",
+      "wordClass": "名詞",
+      "comment": "精錬素材"
+    },
+    {
+      "id": "w158",
+      "categoryId": "cat6",
+      "reading": "せいれんせき",
+      "word": "精練石",
+      "wordClass": "名詞",
+      "comment": "精錬素材"
+    },
+    {
+      "id": "w159",
+      "categoryId": "cat6",
+      "reading": "ぶーりーのきかいへん",
+      "word": "ブーリーの機械片",
+      "wordClass": "名詞",
+      "comment": "精錬素材"
+    },
+    {
+      "id": "w160",
+      "categoryId": "cat6",
+      "reading": "もすのきかいへん",
+      "word": "モスの機械片",
+      "wordClass": "名詞",
+      "comment": "精錬素材"
+    },
+    {
+      "id": "w161",
+      "categoryId": "cat6",
+      "reading": "しょきゅうせいほうばこ",
+      "word": "初級星宝箱",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w162",
+      "categoryId": "cat6",
+      "reading": "さいじょうきゅうそざいせんたくぼっくす",
+      "word": "最上級素材・選択ボックス",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w163",
+      "categoryId": "cat6",
+      "reading": "じょうきゅうそざいせんたくぼっくす",
+      "word": "上級素材・選択ボックス",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w164",
+      "categoryId": "cat6",
+      "reading": "ちゅうきゅうそざいせんたくぼっくす",
+      "word": "中級素材・選択ボックス",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w165",
+      "categoryId": "cat6",
+      "reading": "きほんそざいせんたくぼっくす",
+      "word": "基本素材・選択ボックス",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w166",
+      "categoryId": "cat6",
+      "reading": "ちょうしょくざい",
+      "word": "調色剤",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w167",
+      "categoryId": "cat6",
+      "reading": "すたいりんぐけん",
+      "word": "スタイリング券",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w168",
+      "categoryId": "cat6",
+      "reading": "ばいおりびるどざい",
+      "word": "バイオリビルド剤",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w169",
+      "categoryId": "cat6",
+      "reading": "おうぎのこくいん",
+      "word": "奥義の刻印",
+      "wordClass": "名詞",
+      "comment": "アビリティ強化素材"
+    },
+    {
+      "id": "w170",
+      "categoryId": "cat6",
+      "reading": "るーんごうきんのかけら",
+      "word": "ルーン合金の欠片",
+      "wordClass": "名詞",
+      "comment": "装備交換素材"
+    },
+    {
+      "id": "w171",
+      "categoryId": "cat6",
+      "reading": "こくうごうきんのかけら",
+      "word": "虚空合金の欠片",
+      "wordClass": "名詞",
+      "comment": "装備交換素材"
+    },
+    {
+      "id": "w172",
+      "categoryId": "cat6",
+      "reading": "むかいのひみつばこ",
+      "word": "霧海の秘密箱",
+      "wordClass": "名詞",
+      "comment": "装備交換素材"
+    },
+    {
+      "id": "w173",
+      "categoryId": "cat6",
+      "reading": "ひかりかがやくほしのこあ",
+      "word": "光り輝く星のコア",
+      "wordClass": "名詞",
+      "comment": "装備交換素材"
+    },
+    {
+      "id": "w174",
+      "categoryId": "cat6",
+      "reading": "ござきん",
+      "word": "御座金",
+      "wordClass": "名詞",
+      "comment": "装備交換素材"
+    },
+    {
+      "id": "w175",
+      "categoryId": "cat6",
+      "reading": "ございじゅんきん",
+      "word": "御座純金",
+      "wordClass": "名詞",
+      "comment": "装備交換素材"
+    },
+    {
+      "id": "w176",
+      "categoryId": "cat6",
+      "reading": "かいちゅうせき",
+      "word": "改鋳石",
+      "wordClass": "名詞",
+      "comment": "装備強化素材"
+    },
+    {
+      "id": "w177",
+      "categoryId": "cat6",
+      "reading": "こんとんのらくいん",
+      "word": "混沌の烙印",
+      "wordClass": "名詞",
+      "comment": "バトルイマジン素材"
+    },
+    {
+      "id": "w178",
+      "categoryId": "cat6",
+      "reading": "ときのいはく",
+      "word": "時の遺珀",
+      "wordClass": "名詞",
+      "comment": "バトルイマジン素材"
+    },
+    {
+      "id": "w179",
+      "categoryId": "cat6",
+      "reading": "げんこうのにじ",
+      "word": "幻光の虹",
+      "wordClass": "名詞",
+      "comment": "バトルイマジン素材"
+    },
+    {
+      "id": "w180",
+      "categoryId": "cat6",
+      "reading": "きょじつのざんし",
+      "word": "虚実の残糸",
+      "wordClass": "名詞",
+      "comment": "バトルイマジン素材"
+    },
+    {
+      "id": "w181",
+      "categoryId": "cat6",
+      "reading": "げんしょのこあ",
+      "word": "原初のコア",
+      "wordClass": "名詞",
+      "comment": "バトルイマジン素材"
+    },
+    {
+      "id": "w182",
+      "categoryId": "cat6",
+      "reading": "ふきゅうのかいか",
+      "word": "不朽の開花",
+      "wordClass": "名詞",
+      "comment": "バトルイマジン素材"
+    },
+    {
+      "id": "w183",
+      "categoryId": "cat6",
+      "reading": "ごぶりんのきば",
+      "word": "ゴブリンのキバ",
+      "wordClass": "名詞",
+      "comment": "バトルイマジン素材"
+    },
+    {
+      "id": "w184",
+      "categoryId": "cat6",
+      "reading": "ごぶりんのしっぽ",
+      "word": "ゴブリンの尻尾",
+      "wordClass": "名詞",
+      "comment": "バトルイマジン素材"
+    },
+    {
+      "id": "w185",
+      "categoryId": "cat6",
+      "reading": "むーくのかぎづめ",
+      "word": "ムークの鉤爪",
+      "wordClass": "名詞",
+      "comment": "バトルイマジン素材"
+    },
+    {
+      "id": "w186",
+      "categoryId": "cat6",
+      "reading": "むーくのあついけがわ",
+      "word": "ムークの厚い毛皮",
+      "wordClass": "名詞",
+      "comment": "バトルイマジン素材"
+    },
+    {
+      "id": "w187",
+      "categoryId": "cat6",
+      "reading": "ぎるみーひぞうのしんじゅ",
+      "word": "ギルミー秘蔵の真珠",
+      "wordClass": "名詞",
+      "comment": "バトルイマジン素材"
+    },
+    {
+      "id": "w188",
+      "categoryId": "cat6",
+      "reading": "さんぞくのぐろーぶ",
+      "word": "山賊のグローブ",
+      "wordClass": "名詞",
+      "comment": "バトルイマジン素材"
+    },
+    {
+      "id": "w189",
+      "categoryId": "cat6",
+      "reading": "さんぞくのけん",
+      "word": "山賊の剣",
+      "wordClass": "名詞",
+      "comment": "バトルイマジン素材"
+    },
+    {
+      "id": "w190",
+      "categoryId": "cat6",
+      "reading": "あんむぶんたいのめだる",
+      "word": "暗霧分隊のメダル",
+      "wordClass": "名詞",
+      "comment": "バトルイマジン素材"
+    },
+    {
+      "id": "w191",
+      "categoryId": "cat6",
+      "reading": "すかいふぃっしゅのひれ",
+      "word": "スカイフィッシュのヒレ",
+      "wordClass": "名詞",
+      "comment": "バトルイマジン素材"
+    },
+    {
+      "id": "w192",
+      "categoryId": "cat6",
+      "reading": "ぼあのかたいきば",
+      "word": "ボアの硬い牙",
+      "wordClass": "名詞",
+      "comment": "バトルイマジン素材"
+    },
+    {
+      "id": "w193",
+      "categoryId": "cat6",
+      "reading": "とろーるのつめ",
+      "word": "トロールの爪",
+      "wordClass": "名詞",
+      "comment": "バトルイマジン素材"
+    },
+    {
+      "id": "w194",
+      "categoryId": "cat6",
+      "reading": "かにくものこうら",
+      "word": "カニクモの甲羅",
+      "wordClass": "名詞",
+      "comment": "バトルイマジン素材"
+    },
+    {
+      "id": "w195",
+      "categoryId": "cat6",
+      "reading": "みーんのはね",
+      "word": "ミーンの羽",
+      "wordClass": "名詞",
+      "comment": "バトルイマジン素材"
+    },
+    {
+      "id": "w196",
+      "categoryId": "cat6",
+      "reading": "ふっかつびーんず",
+      "word": "復活ビーンズ",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w197",
+      "categoryId": "b2a2f8d4",
+      "reading": "はいけい",
+      "word": "灰契",
+      "wordClass": "名詞",
+      "comment": "豊年祭（カナミア）イベント"
+    },
+    {
+      "id": "w198",
+      "categoryId": "b2a2f8d4",
+      "reading": "ざぶんちょうろうのはいけい",
+      "word": "ザブン長老の灰契",
+      "wordClass": "名詞",
+      "comment": "豊年祭（カナミア）イベント"
+    },
+    {
+      "id": "w199",
+      "categoryId": "b2a2f8d4",
+      "reading": "からっぽちょうろうのはいけい",
+      "word": "カラッポ長老の灰契",
+      "wordClass": "名詞",
+      "comment": "豊年祭（カナミア）イベント"
+    },
+    {
+      "id": "w200",
+      "categoryId": "b2a2f8d4",
+      "reading": "ほわいとうるふのはいけい",
+      "word": "ホワイトウルフの灰契",
+      "wordClass": "名詞",
+      "comment": "豊年祭（カナミア）イベント"
+    },
+    {
+      "id": "w201",
+      "categoryId": "b2a2f8d4",
+      "reading": "きたけちょうろうのはいけい",
+      "word": "キタケ長老の灰契",
+      "wordClass": "名詞",
+      "comment": "豊年祭（カナミア）イベント"
+    },
+    {
+      "id": "w202",
+      "categoryId": "b2a2f8d4",
+      "reading": "あんしょうもう",
+      "word": "暗晶網",
+      "wordClass": "名詞",
+      "comment": "豊年祭（カナミア）イベント"
+    },
+    {
+      "id": "w203",
+      "categoryId": "b2a2f8d4",
+      "reading": "れいぶ",
+      "word": "霊舞",
+      "wordClass": "名詞",
+      "comment": "豊年祭（カナミア）イベント"
+    },
+    {
+      "id": "w204",
+      "categoryId": "b2a2f8d4",
+      "reading": "せんむおりれいのよる",
+      "word": "千夢織霊の夜",
+      "wordClass": "名詞",
+      "comment": "豊年祭（カナミア）イベント"
+    },
+    {
+      "id": "w205",
+      "categoryId": "b2a2f8d4",
+      "reading": "きさい",
+      "word": "祈歳",
+      "wordClass": "名詞",
+      "comment": "祈歳祝典イベント"
+    },
+    {
+      "id": "w206",
+      "categoryId": "b2a2f8d4",
+      "reading": "さいこうのしずく",
+      "word": "歳光の雫",
+      "wordClass": "名詞",
+      "comment": "祈歳祝典イベント"
+    },
+    {
+      "id": "w207",
+      "categoryId": "b2a2f8d4",
+      "reading": "さいま",
+      "word": "歳魔",
+      "wordClass": "名詞",
+      "comment": "祈歳祝典イベント"
+    },
+    {
+      "id": "w208",
+      "categoryId": "b2a2f8d4",
+      "reading": "ともしびまつり",
+      "word": "灯祭り",
+      "wordClass": "名詞",
+      "comment": "祈歳祝典イベント"
+    },
+    {
+      "id": "w209",
+      "categoryId": "cat7",
+      "reading": "しんぴすとあ",
+      "word": "神秘ストア",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w210",
+      "categoryId": "cat7",
+      "reading": "からふるすとあ",
+      "word": "カラフルストア",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w211",
+      "categoryId": "cat7",
+      "reading": "ろーずじぇむしょっぷ",
+      "word": "ローズジェムショップ",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w212",
+      "categoryId": "cat7",
+      "reading": "ゆうじょうぽいんとしょっぷ",
+      "word": "友情ポイントショップ",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w213",
+      "categoryId": "cat7",
+      "reading": "じーしーしょっぷ",
+      "word": "GCショップ",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w214",
+      "categoryId": "cat7",
+      "reading": "めいせいしょっぷ",
+      "word": "名声ショップ",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w215",
+      "categoryId": "cat8",
+      "reading": "あるーな",
+      "word": "アルーナ",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w216",
+      "categoryId": "cat8",
+      "reading": "てぃな",
+      "word": "ティナ",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w217",
+      "categoryId": "cat8",
+      "reading": "おるゔぇら",
+      "word": "オルヴェラ",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w218",
+      "categoryId": "cat8",
+      "reading": "たーた",
+      "word": "タータ",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w219",
+      "categoryId": "cat8",
+      "reading": "なるる",
+      "word": "ナルル",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w220",
+      "categoryId": "cat8",
+      "reading": "じぇらーど",
+      "word": "ジェラード",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w221",
+      "categoryId": "cat8",
+      "reading": "あめりあ",
+      "word": "アメリア",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w222",
+      "categoryId": "cat8",
+      "reading": "らもんど",
+      "word": "ラモンド",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w223",
+      "categoryId": "cat8",
+      "reading": "どろしー",
+      "word": "ドロシー",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w224",
+      "categoryId": "cat8",
+      "reading": "ろろーら",
+      "word": "ロローラ",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w225",
+      "categoryId": "cat8",
+      "reading": "ろとろあに",
+      "word": "ロトロアニ",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w226",
+      "categoryId": "cat8",
+      "reading": "でんゔぇる",
+      "word": "デンヴェル",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w227",
+      "categoryId": "cat8",
+      "reading": "へるが",
+      "word": "ヘルガ",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w228",
+      "categoryId": "cat9",
+      "reading": "かいたくしゃほうしょう",
+      "word": "開拓者褒賞",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w229",
+      "categoryId": "cat9",
+      "reading": "ぎるどはんと",
+      "word": "ギルドハント",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w230",
+      "categoryId": "cat9",
+      "reading": "ぎるどだんす",
+      "word": "ギルドダンス",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w231",
+      "categoryId": "cat9",
+      "reading": "ふぁんとむだっしゅ",
+      "word": "ファントムダッシュ",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w232",
+      "categoryId": "cat9",
+      "reading": "きょしょく",
+      "word": "虚触",
+      "wordClass": "名詞",
+      "comment": ""
+    },
+    {
+      "id": "w233",
+      "categoryId": "cat9",
+      "reading": "きょしょくのきょうちょう",
+      "word": "虚触の狂潮",
+      "wordClass": "名詞",
+      "comment": "シーズン名称"
+    }
+  ]
+}
